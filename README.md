@@ -3,11 +3,26 @@ Basic {sparklyr} Extension
 
 ## Example
 
+### Local Cluster
+
 ``` r
 library(sparkhello)
 library(sparklyr)
 
 sc <- spark_connect(master = "local")
+
+hello(sc)
+
+spark_disconnect(sc)
+```
+
+### Databricks
+
+``` r
+library(sparkhello)
+library(sparklyr)
+
+sc <- spark_connect(method = "databricks")
 
 hello(sc)
 

@@ -1,8 +1,7 @@
 spark_dependencies <- function(spark_version, scala_version, ...) {
   sparklyr::spark_dependency(
     jars = c(
-      system.file(
-        sprintf("java/sparkhello-3.5.3-2.13.15.jar"), package = "sparkhello")
+      system.file("java/sparkhello-3.5.3-2.12.20.jar", package = "sparkhello")
     )
   )
 }
